@@ -1,0 +1,644 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+    color: white;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(image/background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    padding: 10px 10%
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    margin-top: 5px;
+    width: 150px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header-text {
+    margin-top: 16%;
+    font-size: 30px;
+}
+
+.header-text h2 span {
+    color: aqua;
+}
+
+.btn-resume {
+    display: block;
+    width: fit-content;
+    padding: 14px 50px;
+    border-radius: 6px;
+    background: aqua;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: background 0.2s;
+    margin-top: 40px;
+}
+
+.btn-resume:hover {
+    background: #f1f1f1;
+}
+
+
+/* -------------- about ------------- */
+
+#about {
+    padding: 40px 0;
+    color: white;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: #242424;
+    padding: 60px 80px;
+    border-radius: 20px;
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+}
+
+.about-col-1 img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2 {
+    flex-basis: 60%;
+}
+
+.sub-title {
+    font-size: 50px;
+    font-weight: 600;
+    color: #0891d6;
+    text-decoration: underline;
+}
+
+.about-col-2 p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+
+/* ----------------- Education ---------------- */
+
+#Education {
+    padding: 30px 0;
+}
+
+.edu-list {
+    margin-top: 30px;
+}
+
+.edu-list-1 {
+    width: 40%;
+}
+
+.edu-list-2 {
+    margin-top: 10px;
+    margin-left: 30%;
+    width: 40%;
+}
+
+.edu-list-3 {
+    margin-top: 10px;
+    margin-left: 60%;
+    width: 40%;
+}
+
+.edu-list div {
+    background: #ea3b78ba;
+    padding: 15px 40px;
+    font-size: 10px;
+    font-weight: 300;
+    border-radius: 30px;
+}
+
+.edu-list div h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+.edu-list div p {
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 3px;
+}
+
+
+/* ------------------- skils ----------------- */
+
+.skill {
+    padding: 40px 0;
+    margin-top: 30px;
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 20px;
+    background-color: #4CAF50;
+    border-radius: 5px;
+}
+
+.progress-label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 5px;
+}
+
+.skill-col {
+    flex-basis: 30%;
+}
+
+.skill-col div {
+    margin: 5px;
+}
+
+.c-skill {
+    margin-left: 10%;
+    width: 80%;
+    background: #2f2f2f;
+    padding: 40px 40px;
+    border-radius: 20px;
+}
+
+.c-skill h2 {
+    text-decoration: underline;
+    margin-bottom: 15px;
+}
+
+.row-skill {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.skill-col h4 {
+    text-decoration: underline;
+    margin-bottom: 5px;
+}
+
+
+/* ----------------- Project --------------- */
+
+#project {
+    padding: 50px 0;
+}
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work {
+    border-radius: 10 px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img {
+    width: 100%;
+    height: 40vh;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    transition: height 0.5s;
+}
+
+.layer h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer a {
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.work:hover img {
+    transform: scale(1.1);
+}
+
+.work:hover .layer {
+    height: 40vh;
+}
+
+.btn {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+
+.btn:hover {
+    background: #ff004f;
+}
+
+
+/* ------------------ Contact Me ------------------ */
+
+#contact {
+    padding: 50px 0;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: #242424;
+    padding: 60px 80px;
+    border-radius: 20px;
+}
+
+.form1 {
+    flex-basis: 50%;
+}
+
+.form2 {
+    flex-basis: 50%;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.btn-submit {
+    display: block;
+    width: fit-content;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: background 0.2s;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.btn-submit:hover {
+    background: #4c970ad1;
+    border: 1px solid #4c970ad1;
+}
+
+.social-icons {
+    width: 40%;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.social-icons img {
+    width: 40px;
+    margin: 10px;
+}
+
+.fab {
+    padding: 5px;
+    background: white;
+    border-radius: 50%;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.c-item {
+    padding: 5px;
+    justify-content: space-between;
+}
+
+
+/* --------------- Footer ------------- */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+
+/* --------------- Achieve ------------- */
+
+.achieve-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: #1f7fce86;
+    padding: 40px 80px;
+    border-radius: 20px;
+}
+
+.achieve-container h2 {
+    text-decoration: underline;
+}
+
+.slider-container {
+    width: 700px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-controls {
+    margin-top: 10px;
+    text-align: center;
+    color: white;
+}
+
+.slider-controls button {
+    margin: 0 5px;
+}
+
+
+/* --------------- small Screen --------------- */
+
+nav .fas {
+    display: none;
+}
+
+.more-btn {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 15px 7%;
+    }
+    #header {
+        background-image: url(image/backgroung-small.jpg);
+        margin-bottom: 30px;
+    }
+    .header-text {
+        margin-top: 85%;
+        font-size: 25px;
+    }
+    .header-text h2 {
+        font-size: 20px;
+    }
+    .btn-resume {
+        padding: 14px 30px;
+    }
+    nav .fas {
+        display: block;
+        font-size: 25px;
+    }
+    nav ul {
+        background: #064d72ed;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title {
+        font-size: 30px;
+    }
+    .row {
+        padding: 20px;
+    }
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%;
+    }
+    .about-col-1 {
+        margin-bottom: 30px;
+    }
+    .more-btn {
+        display: block;
+        margin: auto;
+        margin-top: 15px;
+        padding: 10px 20px;
+        font-size: 14px;
+        font-weight: 600;
+        border-radius: 20px;
+    }
+    .more-btn:hover {
+        background-color: rgb(155, 134, 14);
+        color: white;
+    }
+    .moreText {
+        display: none;
+    }
+    .text.show-more .moreText {
+        display: inline;
+    }
+    .text.show-more .dots {
+        display: none;
+    }
+    .edu-list div {
+        padding: 15px 20px;
+    }
+    .edu-list {
+        padding: 0 20px;
+    }
+    .edu-list-1,
+    .edu-list-2,
+    .edu-list-3 {
+        width: 100%;
+        margin-left: 0;
+    }
+    .c-skill h2 {
+        margin-bottom: 25px;
+    }
+    .skill-col {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+    .row-skill {
+        padding: 0 10px;
+    }
+    .work img {
+        width: 98%;
+        height: 35vh;
+    }
+    .layer {
+        font-size: 14px;
+    }
+    .work:hover .layer {
+        height: 35vh;
+    }
+    .more-work1 {
+        display: none;
+    }
+    .more-work2 {
+        display: none;
+    }
+    .more-work3 {
+        display: none;
+    }
+    .achieve-container {
+        padding: 25px 10px;
+    }
+    .achieve-container h2 {
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    .slider-container {
+        width: 95%;
+        height: 35%;
+    }
+    #prevBtn {
+        display: none;
+    }
+    #nextBtn {
+        display: none;
+    }
+    .contact-container {
+        padding: 20px;
+    }
+    .contact-details p {
+        display: none;
+        width: 0;
+        height: 0;
+    }
+    .form1,
+    .form2 {
+        flex-basis: 100%;
+    }
+    .form1 {
+        font-size: 13px;
+    }
+    .social-icons {
+        width: 100%;
+    }
+    .social-icons a {
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    .social-icons a i {
+        padding: 10px;
+    }
+    .btn-submit {
+        margin-top: 10px;
+    }
+}
