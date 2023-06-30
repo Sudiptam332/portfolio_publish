@@ -486,8 +486,8 @@ nav .fas {
         margin-bottom: 30px;
     }
     .header-text {
-        margin-top: 95%;
-        font-size: 25px;
+        margin-top: 100%;
+        font-size: 23px;
     }
     .header-text h2 {
         font-size: 20px;
@@ -579,13 +579,13 @@ nav .fas {
     }
     .work img {
         width: 98%;
-        height: 30vh;
+        height: 20vh;
     }
     .layer {
         font-size: 14px;
     }
     .work:hover .layer {
-        height: 30vh;
+        height: 20vh;
     }
     .more-work1 {
         display: none;
