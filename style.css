@@ -579,13 +579,13 @@ nav .fas {
     }
     .work img {
         width: 98%;
-        height: 20vh;
+        height: 30vh;
     }
     .layer {
         font-size: 14px;
     }
     .work:hover .layer {
-        height: 20vh;
+        height: 30vh;
     }
     .more-work1 {
         display: none;
