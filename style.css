@@ -158,11 +158,19 @@ nav ul li a:hover::after {
 }
 
 .edu-list div {
-    background: #ea3b78ba;
-    padding: 15px 40px;
+    padding: 15px 20px;
     font-size: 10px;
     font-weight: 300;
     border-radius: 30px;
+}
+
+.d-flex{
+    display: flex;
+    background: #ea3b78ba;
+}
+
+.d-flex img{
+    width: 30%;
 }
 
 .edu-list div h3 {
@@ -243,17 +251,21 @@ nav ul li a:hover::after {
 /* ----------------- Project --------------- */
 
 #project {
+    width: 100%;
     padding: 50px 0;
 }
 
 .work-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
     margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
 }
 
 .work {
+    flex-basis: 31%;
     border-radius: 10 px;
     position: relative;
     overflow: hidden;
@@ -261,7 +273,7 @@ nav ul li a:hover::after {
 
 .work img {
     width: 100%;
-    height: 40vh;
+    height: 42vh;
     border-radius: 10px;
     display: block;
     transition: transform 0.5s;
@@ -280,7 +292,7 @@ nav ul li a:hover::after {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 40px;
+    padding: 0 10px;
     text-align: center;
     transition: height 0.5s;
 }
@@ -290,7 +302,30 @@ nav ul li a:hover::after {
     margin-bottom: 20px;
 }
 
+.layer p {
+    font-weight: 200;
+}
+
 .layer a {
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.con {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.con a {
     margin-top: 20px;
     color: #ff004f;
     text-decoration: none;
@@ -308,7 +343,8 @@ nav ul li a:hover::after {
 }
 
 .work:hover .layer {
-    height: 40vh;
+    height: 42vh;
+    padding: 10px;
 }
 
 .btn {
@@ -424,9 +460,6 @@ footer {
 /* --------------- Achieve ------------- */
 
 .achieve-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
     background: #1f7fce86;
     padding: 40px 80px;
     border-radius: 20px;
@@ -437,22 +470,22 @@ footer {
 }
 
 .slider-container {
-    width: 700px;
+    width: 560px;
     height: 400px;
     overflow: hidden;
-    position: relative;
     margin: auto;
+    position: relative;
 }
 
 .slider {
-    width: 100%;
-    height: 100%;
     display: flex;
+    transition: transform 0.5s ease;
+    will-change: transform;
 }
 
 .slider img {
     width: 100%;
-    height: 100%;
+    height: 400px;
     object-fit: cover;
 }
 
@@ -465,6 +498,8 @@ footer {
 .slider-controls button {
     margin: 0 5px;
 }
+
+
 
 
 /* --------------- small Screen --------------- */
@@ -577,6 +612,10 @@ nav .fas {
     .row-skill {
         padding: 0 10px;
     }
+    .work{
+        flex-direction: column;
+        flex-basis: 100%;
+    }
     .work img {
         width: 98%;
         height: 30vh;
@@ -596,6 +635,12 @@ nav .fas {
     .more-work3 {
         display: none;
     }
+    .more-work4 {
+        display: none;
+    }
+    .more-work5 {
+        display: none;
+    }
     .achieve-container {
         padding: 25px 10px;
     }
@@ -604,8 +649,13 @@ nav .fas {
         margin-bottom: 20px;
     }
     .slider-container {
-        width: 95%;
-        height: 35%;
+        width: 100%;
+        height: 33vh;
+    }
+    .slider img {
+        width: 100%;
+        height: 33vh;
+        object-fit: cover;
     }
     #prevBtn {
         display: none;
